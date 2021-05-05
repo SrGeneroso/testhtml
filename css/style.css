@@ -1,0 +1,625 @@
+/*Variables globales*/
+
+ :root {
+    --menu-height: 100px;
+    --section-height: 1080px;
+    --menu-margin-left: 25px;
+    --menu-margin-right: 50px;
+    --logo-height: 75px;
+    --logo-width: 75px;
+    --menu-item-separation: 30px;
+    --section-color-info: #fee2b3;
+    --section-color-productos: #3F3244;
+    --section-color-galeria: #3F3244;
+    --section-color-contacto: #BA75D9;
+    --text-color-bright: white;
+    --text-color-dark: black;
+    /*Scrool suavizado cuando clickamos en las anclas del menu*/
+    scroll-behavior: smooth;
+}
+
+
+/*Fuentes*/
+
+@font-face {
+    font-family: ArchitectsDaughter;
+    src: url(/fonts/ArchitectsDaughter-Regular.ttf);
+}
+
+
+/*Propiedas generales*/
+
+* {
+    /* Reset de los valores predefinidos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Estilo basico del texto*/
+    font-family: ArchitectsDaughter;
+    text-transform: uppercase;
+    color: var(--text-color-bright);
+}
+
+
+/*Menu superior*/
+
+header>nav {
+    /*Oscurecimiento del menu para que se sepa lo que cubre*/
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Anclar el menu sin importar el scroll*/
+    position: fixed;
+    /* Poscionado en la parte superior*/
+    top: 0;
+    /*Todo el ancho de la pagina*/
+    width: 100%;
+    /*Tama;o del menu superior*/
+    height: var(--menu-height);
+    /*Ajuste del posicionamiento de los elementos del menu*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*Transicion cuando cambiamos la altura del menu desde js*/
+    transition: height 0.25s;
+}
+
+
+/*Establecemos el contenedor del logo para que se ajuste al tama;o del menu ya que vamos a cambiar su tama'o*/
+
+header>nav>a {
+    height: 80%;
+}
+
+#logo {
+    /*Tama;o del logo*/
+    max-height: 90%;
+    max-width: 90%;
+    /*Separacion desde el margen izq*/
+    margin-left: var(--menu-margin-left);
+}
+
+#topMenu {
+    /*Quitar los marcadores de la lista*/
+    list-style-type: none;
+    /*Separacion desde el margen dch*/
+    margin-right: var(--menu-margin-right);
+}
+
+
+/*Alinear en una sola linea*/
+
+.topMenuItem {
+    float: left;
+}
+
+
+/*Espaciado entre los elementos del menu sin afectar el primero*/
+
+.topMenuItem:not(:first-child) {
+    margin-left: var(--menu-item-separation);
+}
+
+.topMenuItem>a {
+    /*Quitar el subrayado de links*/
+    text-decoration: none;
+    /*Ajuste de fuente*/
+    font-size: 1.5vw;
+}
+
+
+/*Cambiar color de los items del menu superior cuando pasamos el raton por encima*/
+
+.topMenuItem a:hover {
+    filter: brightness(0.7);
+}
+
+
+/*Seccion Hero Image*/
+
+#encabezado {
+    /*Definicion de la imagen de fondo */
+    background-size: 100%;
+    /*Oscurecimiento de la imagen de fondo*/
+    background-blend-mode: darken;
+    width: 100%;
+    /*Tama;o de seccion menos el tama;o del menu*/
+    height: var(--section-height);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /*Animacion del fondo*/
+    animation: bgSlider 25s infinite;
+}
+
+
+/*Propiedades de animacion del fondo*/
+
+@keyframes bgSlider {
+    0% {
+        background: rgba(0, 0, 0, 1) url("/img/bgimg1.webp");
+    }
+    2% {
+        background: rgba(0, 0, 0, 0.7) url("/img/bgimg1.webp");
+    }
+    48% {
+        background: rgba(0, 0, 0, 0.7) url("/img/bgimg1.webp");
+    }
+    50% {
+        background: rgba(0, 0, 0, 1) url("/img/bgimg2.webp");
+    }
+    52% {
+        background: rgba(0, 0, 0, 0.7) url("/img/bgimg2.webp");
+    }
+    98% {
+        background: rgba(0, 0, 0, 0.7) url("/img/bgimg2.webp");
+    }
+    100% {
+        background: rgba(0, 0, 0, 1) url("/img/bgimg1.webp");
+    }
+}
+
+
+/*Estilo del texto de la seccion Hero*/
+
+#encabezado h1,
+h2,
+h3 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#encabezado h1 {
+    /*Ajustamos el margen superior en el primer elemento*/
+    margin-top: auto;
+    font-size: 7vw;
+}
+
+#encabezado h2 {
+    width: fit-content;
+    font-size: 4vw;
+}
+
+#encabezado h3 {
+    width: 60%;
+    /*Ajustamos el margen inferior en el ultimo elemento*/
+    margin-bottom: auto;
+    text-align: center;
+    font-size: 2vw;
+}
+
+
+/*Seccion Productos*/
+
+#productos {
+    background-color: var(--section-color-productos);
+    width: 100%;
+    height: var(--section-height);
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Ajuste tama;o y posicion del container principal de la seccion*/
+
+#store-container {
+    width: 70%;
+    height: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/*Posicion de los elementos del menu*/
+
+#store-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*Quitamos los marcadores de la lista*/
+
+#store-menu ul {
+    list-style-type: none;
+}
+
+
+/*Colocamos y espaciomos las pesta;as*/
+
+#store-menu ul>li {
+    float: right;
+    margin: 25px 25px;
+}
+
+.active-tab {
+    color: #BA75D9;
+}
+
+
+/*Estilo texto menu productos*/
+
+#store-menu h1 {
+    font-size: 2vw;
+    margin-left: var(--menu-margin-left);
+}
+
+#store-menu a {
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+#store-menu a:hover {
+    /*Cambiar de color en los items del menu de productos*/
+    filter: brightness(0.7);
+}
+
+
+/*Aplicamos tama;o y posicion a los elementos de la fila de la tienda*/
+
+.store-row {
+    width: 100%;
+    height: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store-active {
+    display: flex;
+}
+
+
+/* Elemento tipo tarjeta de cada producto*/
+
+.store-items {
+    width: 30%;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Estilo de la imagen de producto*/
+
+.store-items img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*Estilo de los diferentes textos del producto*/
+
+.store-item-title {
+    font-size: 2vw;
+    margin: 10px;
+}
+
+.store-item-desc {
+    font-size: 1.5vw;
+    margin: 10px;
+}
+
+.store-item-price {
+    color: grey;
+    font-size: 2vw;
+    margin: 10px;
+}
+
+
+/*Seccion Video*/
+
+#info {
+    background-color: var(--section-color-info);
+    width: 100%;
+    height: calc(var(--section-height) - var(--menu-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Container principal de video y descripcion*/
+
+#info-container {
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+}
+
+
+/*Container de la seccion de video*/
+
+#info-video {
+    /*Mitad del ancho y a altura completa*/
+    width: 60%;
+    height: 100%;
+    float: left;
+    /*Para centrar el video verticalmente*/
+    display: flex;
+    align-items: center;
+}
+
+#info-video>video {
+    max-width: 100%;
+}
+
+
+/*Container de la descripcion del video*/
+
+#info-description {
+    width: 40%;
+    height: 100%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Estilo texto seccion descripcion info*/
+
+#info-description h1,
+p {
+    color: var(--text-color-dark);
+    text-align: center;
+    width: 90%;
+}
+
+#info-description h1 {
+    font-size: 2.5vw;
+}
+
+#info-description p {
+    font-size: 1.5vw;
+}
+
+
+/*Seccion Galeria*/
+
+#galeria {
+    background-color: var(--section-color-galeria);
+    width: 100%;
+    height: calc(var(--section-height) - var(--menu-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Nota: viniendo del dise;o parametrico abuso bastante del Flex para posicionamiento pero prefiero grid cuando quiero concretar el numero de columans y filas*/
+
+#galeria-container {
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.galeriaImg {
+    float: left;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5%;
+    box-shadow: 5px 5px 10px hsl(0, 0%, 0%);
+    transition: transform 0.5s, box-shadow 0.5s ease-in-out;
+}
+
+
+/*Efecto de las imagenes de la galeria*/
+
+.galeriaImg:hover {
+    cursor: pointer;
+    transform: scale(105%);
+    box-shadow: 10px 10px 15px hsl(0, 0%, 0%);
+}
+
+
+/*Lightbox*/
+
+
+/*Fondo del lightbox*/
+
+#galleryLightbox {
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    display: none;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+
+/*Imagen en lightbox*/
+
+#lbImg {
+    z-index: 3;
+    height: 100vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+}
+
+#lbPrev {
+    z-index: 3;
+    height: 100vh;
+    padding-top: 45vh;
+    padding-bottom: 45vh;
+    margin-right: 15px;
+    /*Al usar solo una imagen la giro para aprovecharla en ambos lados*/
+    transform: rotate(180deg);
+}
+
+#lbNext {
+    z-index: 3;
+    height: 100vh;
+    padding-top: 45vh;
+    padding-bottom: 45vh;
+    margin-left: 15px;
+}
+
+#lbPrev:hover,
+#lbNext:hover {
+    filter: brightness(150%);
+    cursor: pointer;
+}
+
+
+/*Seccion Contacto*/
+
+
+/*Dimensiones y estilo de la seccion general de contacto*/
+
+#contacto {
+    background-color: var(--section-color-contacto);
+    width: 100%;
+    height: calc(var(--section-height) - calc(var(--menu-height)*2));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+/*Definicion del container interior*/
+
+#contacto-container {
+    width: 70%;
+    height: 85%;
+}
+
+
+/*Estilo del titulo de la seccion*/
+
+#contacto-container h1 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+
+/*Contenedor del mapa*/
+
+#mapa {
+    float: left;
+    width: 50%;
+    height: 80%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/*Sobreescribo las dimensiones de la url del iframe para ajustar el aspect ratio deseado*/
+
+#mapa iframe {
+    width: 80%;
+    height: 60%;
+}
+
+
+/*Contenedor del formulario*/
+
+#formulario {
+    float: right;
+    width: 50%;
+    height: 80%;
+    margin-top: 50px;
+}
+
+
+/*Ajuste de la posicion de los elementos del formulario*/
+
+#formulario form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    row-gap: 25px;
+}
+
+
+/*Estilo del texto del formulario*/
+
+#formulario input,
+textarea {
+    color: var( --text-color-dark);
+    padding-left: 10px;
+    width: 60%;
+}
+
+
+/*Estilo del boton del formulario*/
+
+#formulario button,
+#modalContactoBoton {
+    color: var( --text-color-dark);
+    background-color: var(--section-color-info);
+    width: 40%;
+    font-size: 1vw;
+    border-radius: 5px;
+    line-height: 2.5;
+    border: none;
+}
+
+
+/*Estilo modal contacto*/
+
+#modalContacto {
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    display: none;
+    top: 0;
+    z-index: 2;
+    padding-top: 25vh;
+}
+
+
+/*Estilo del background del mensaje*/
+
+#modalContactoContainer {
+    width: 40%;
+    height: 15%;
+    margin: auto;
+    border-radius: 25px;
+    background-color: #BA75D9;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Seccion footer con las redes sociales*/
+
+#redes {
+    background-color: var(--section-color-contacto);
+    width: 100%;
+    height: var(--menu-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+
+
+/*dimensionado de las imagenes del footer*/
+
+#redes img {
+    float: left;
+    width: 75px;
+    height: 75px;
+}

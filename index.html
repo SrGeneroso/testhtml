@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AVRA SHOP</title>
+    <!-- Estilo -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Estilo -->
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- Logica -->
+    <script src="/js/js.js" defer></script>
+    <!-- librerias aos -->
+    <link href="/css/aos.css" rel="stylesheet">
+    <script src="/js/aos.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img id="logo" src="img/logo-white.webp" alt="">
+            </a>
+            <ul id="topMenu">
+                <li class="topMenuItem">
+                    <a href="#encabezado">INICIO</a>
+                </li>
+                <li class="topMenuItem">
+                    <a href="#productos">PRODUCTOS</a>
+                </li>
+                <li class="topMenuItem">
+                    <a href="#info">INFO</a>
+                </li>
+                <li class="topMenuItem">
+                    <a href="#galeria">GALERIA</a>
+                </li>
+                <li class="topMenuItem">
+                    <a href="#contacto">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="encabezado">
+            <h1>Avra Shop</h1>
+            <h2>Una tienda de cosas bonitas</h2>
+            <h3>Productos relacionados con la creación artesanal de jabón y otros artículos de calidad.</h3>
+        </div>
+    </header>
+    <section id="productos">
+        <div id="store-container">
+            <div id="store-menu">
+                <h1 data-aos="fade-right">productos</h1>
+                <ul data-aos="fade-left">
+                    <li>
+                        <a href="#productos" class='store-tab active-tab' id='jaboneras'>Jaboneras</a>
+                    </li>
+                    <li>
+                        <a href="#productos" class='store-tab' id='cortadores'>Cortadores</a>
+                    </li>
+                    <li>
+                        <a href="#productos" class='store-tab' id='materiales'>Materiales</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-aos="fade-up" class="store-row store-active" id='store-jaboneras'>
+                <div class="store-items">
+                    <img src="/img/1.webp" alt="Jabonera 1">
+                    <div class="store-item-title">jabonera mod.1</div>
+                    <div class="store-item-desc">90x90x16</div>
+                    <div class="store-item-price">4.50€/ud</div>
+                </div>
+                <div class="store-items">
+                    <img src="/img/2.webp" alt="Jabonera 21">
+                    <div class="store-item-title">jabonera mod.21</div>
+                    <div class="store-item-desc">80x100x16</div>
+                    <div class="store-item-price">4.20€/ud</div>
+                </div>
+                <div class="store-items">
+                    <img src="/img/3.webp" alt="Jabonera 22">
+                    <div class="store-item-title">jabonera mod.22</div>
+                    <div class="store-item-desc">80x100x16</div>
+                    <div class="store-item-price">4.75€/ud</div>
+                </div>
+            </div>
+            <div class="store-row" id='store-cortadores'>
+                <div class="store-items">
+                    <img src="/img/cutter1.webp" alt="Cortador A">
+                    <div class="store-item-title">Cortador A</div>
+                    <div class="store-item-desc">Corte Simple</div>
+                    <div class="store-item-price">16.5€/ud</div>
+                </div>
+                <div class="store-items">
+                    <img src="/img/cutter2.webp" alt="Cortador B">
+                    <div class="store-item-title">Cortador B</div>
+                    <div class="store-item-desc">Multicorte simultaneo</div>
+                    <div class="store-item-price">25.50€/ud</div>
+                </div>
+                <div class="store-items">
+                    <img src="/img/cutter3.webp" alt="Cortador C">
+                    <div class="store-item-title">Cortador C</div>
+                    <div class="store-item-desc">Corte Ondulado</div>
+                    <div class="store-item-price">19.95€/ud</div>
+                </div>
+            </div>
+            <div class="store-row" id='store-materiales'>
+                <div class="store-items">
+                    <img src="/img/material1.webp" alt="Jabonera">
+                    <div class="store-item-title">Glicerina</div>
+                    <div class="store-item-desc">Base para fundido</div>
+                    <div class="store-item-price">7.5€/ud</div>
+                </div>
+                <div class="store-items">
+                    <img src="/img/material2.webp" alt="Jabonera">
+                    <div class="store-item-title">Tintes</div>
+                    <div class="store-item-desc">Jgo. Colores</div>
+                    <div class="store-item-price">10.50€/ud</div>
+                </div>
+                <div class="store-items">
+                    <img src="/img/material3.webp" alt="Jabonera">
+                    <div class="store-item-title">Herramientas</div>
+                    <div class="store-item-desc">espatulas</div>
+                    <div class="store-item-price">15.75€/ud</div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="info">
+        <div id="info-container">
+            <div data-aos="flip-down" id="info-video">
+                <video src="/img/video.mp4" controls></video>
+            </div>
+            <div data-aos="zoom-in-left" id="info-description">
+                <h1>JABON ARTESANAL</h1>
+                <p>El jabón básicamente es una sal sódica o potásica resultante de la reacción química entre un álcali (hidróxido de sodio o de potasio) y un lípido​ esta reacción se denomina saponificación. </p>
+            </div>
+        </div>
+    </section>
+    <section id="galeria">
+        <div id="galeria-container">
+            <img src="img/gal1.webp" alt="Imagen Avra" class="galeriaImg">
+            <img src="img/gal2.webp" alt="Imagen Avra" class="galeriaImg">
+            <img src="img/gal3.webp" alt="Imagen Avra" class="galeriaImg">
+            <img src="img/gal4.webp" alt="Imagen Avra" class="galeriaImg">
+            <img src="img/gal5.webp" alt="Imagen Avra" class="galeriaImg">
+            <img src="img/gal6.webp" alt="Imagen Avra" class="galeriaImg">
+            <img src="img/gal7.webp" alt="Imagen Avra" class="galeriaImg">
+            <img src="img/gal8.webp" alt="Imagen Avra" class="galeriaImg">
+        </div>
+        <div id="galleryLightbox">
+            <img src="/img/arrow.webp" alt="Lightbox Previous" id="lbPrev">
+            <img src="/img/gal1.webp" alt="Imagen Lightbox" id="lbImg">
+            <img src="/img/arrow.webp" alt="Lightbox Previous" id="lbNext">
+        </div>
+    </section>
+    <section id="contacto">
+        <div id="contacto-container">
+            <h1 data-aos="zoom-in">contacto</h1>
+            <div data-aos="zoom-out" id="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387668.1367411236!2d-4.281142043953831!3d40.61538374478283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f5708e19bc3%3A0x987146415d22389c!2siFP%20Centro%20de%20Formaci%C3%B3n%20Profesional!5e0!3m2!1sen!2ses!4v1616430202511!5m2!1sen!2ses"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="mapa" name="mapa"></iframe>
+            </div>
+            <div data-aos="zoom-out-left" id="formulario">
+                <H1>¡ESCRIBENOS!</H1>
+                <form action="#" id="contact-form">
+                    <input type="text" name="formName" id="formName" placeholder="NOMBRE" required>
+                    <input type="email" name="formMail" id="formMail" placeholder="example@mail.com" required>
+                    <textarea name="formText" id="formText" cols="30" rows="5" form="contact-form" placeholder="Escribe aqui tu mensaje" required></textarea>
+                    <button id="formButton" onclick="showFormModal()" type="button">enviar</button>
+                </form>
+            </div>
+        </div>
+        <div id="modalContacto">
+            <div id="modalContactoContainer">
+                <h1 id="modalContactoTitulo">Titulo</h1>
+                <p id="modalContactoMensaje">Lorem ipsum</p>
+                <button id="modalContactoBoton" onclick="closeFormModal()">OK</button>
+            </div>
+
+        </div>
+    </section>
+    <footer id="redes">
+        <a data-aos="fade-up-right" data-aos-offset="-50" href="https://www.twitter.com"><img src="img/tw.webp" alt="twitter logo"></a>
+        <a data-aos="fade-up" data-aos-offset="-50" href="https://www.facebook.com/"><img data-aos="fade-up" data-aos-offset="-50" src="img/fb.webp" alt="Logo Facebook"></a>
+        <a data-aos="fade-up-left" data-aos-offset="-50" href="https://www.youtube.com"><img src="img/yt.webp" alt="Logo Youtube"></a>
+    </footer>
+    <!-- la ejecucion de aos se pelea con la inicializacion de variables, asi que incluyo defer en la carga de scripts y solo lo ejecuto una vez la pagina ha sido cargada -->
+    <script defer>
+        window.addEventListener("load", executeAos);
+
+        function executeAos() {
+            AOS.init();
+        }
+    </script>
+</body>
+
+
+</html>
